@@ -1,0 +1,88 @@
+.sidebar {
+    color: white;
+    background-color: var(--slack-color);
+    border: 1px solid #49274b;
+    max-width: 260px;
+    height: calc(100vh - 64px);
+    overflow: overlay;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 64px;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #49274b;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+
+
+.sidebar_header {
+    display: flex;
+    border-bottom: 1px solid #49274b;
+    padding-bottom: 10px;
+    padding: 13px;
+}
+
+.sidebar_header > .MuiSvgIcon-root {
+    background-color: white;
+    color: #49274b;
+    padding: 8px;
+    font-size: 18px;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.sidebar_info {
+    flex: 1;
+}
+
+.sidebar_info > h2 {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    width: 120px;
+    word-break: break-all;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.sidebar_info > h3 {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.sidebar_info > h3 > svg {
+    color: green;
+    margin-right: 2px;
+    margin-top: 1px;
+    font-size: 14px;
+}
+
+.sidebar > hr {
+    margin-block: 10px;
+    border: 1px solid #49274b;
+}
+
+.navigation {
+    text-decoration: none;
+    color: white;
+}

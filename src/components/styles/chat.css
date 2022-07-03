@@ -1,0 +1,109 @@
+.chat {
+    width: 100%;
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    padding-bottom: 38px;
+    position: relative;
+    padding-top: 65px;
+}
+
+.chat_messages {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.chat_messages::-webkit-scrollbar {
+    width: 12px;
+}
+.chat_messages::-webkit-scrollbar-track {
+    background-color: var(--slack-color) !important;
+    border-radius: 10px;
+}
+.chat_messages::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255) !important;
+    width: 12px !important;
+    border-radius: 10px !important;
+    border: 2px solid var(--slack-color) !important;
+}
+
+.chat_header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.chat_header_left > h4 {
+    display: flex;
+    align-items: center;
+}
+
+.chat_channel_name {
+    text-transform: lowercase;
+}
+
+.chat_channel_name > svg {
+    margin-left: 10px !important;
+    font-size: 20px !important;
+}
+
+.chat_header_right > p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.chat_header_right > p > svg {
+    margin-right: 5px !important;
+    font-size: 20px !important;
+}
+
+form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+}
+
+.message_input {
+    flex: 1 1 90%;
+    outline: none;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    background-color: var(--slack-color);
+    transition: 400ms;
+}
+
+.send_button {
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-weight: 500;
+    background-color: rgb(71, 136, 71);
+    cursor: pointer;
+}
+
+.send_button:active {
+    background-color: rgba(71, 136, 71, 0.71);
+}
+
+.message_input::placeholder {
+    color: rgb(139, 113, 113);
+}
+
+.message_input:focus {
+    background-color: rgba(0, 0, 0, 0.118);
+}
